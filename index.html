@@ -52,6 +52,25 @@ a{color:inherit;text-decoration:none}.nav{position:fixed;top:0;left:0;right:0;z-
 .scribble,.quote{animation:softFloat 6s ease-in-out infinite}
 .enter-inner{animation:lineReveal 1.2s cubic-bezier(.2,.8,.2,1) both}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+
+/* MOBILE VISIBILITY FIX — additive only, desktop unchanged */
+@media (max-width:800px){
+  .hero-image,.media,.special-landscape{overflow:hidden;display:block;}
+  .hero-image{height:auto;min-height:0;aspect-ratio:4/5;}
+  .hero-image img{display:block;width:100%;height:100%;min-height:0;object-fit:contain;object-position:center;background:#111;}
+  .media{height:auto;min-height:0;aspect-ratio:4/5;}
+  .media img{display:block;width:100%;height:100%;min-height:0;object-fit:contain;object-position:center;background:#111;}
+  .media-landscape{height:auto;min-height:0;aspect-ratio:16/10;}
+  .chapter:nth-of-type(2) .media-landscape img{object-fit:contain!important;object-position:50% 62%!important;transform:scale(.86)!important;}
+  .gallery{width:100%;}
+  .tile{min-height:0;height:auto!important;aspect-ratio:1/1;}
+  .tile:nth-child(1),.tile:nth-child(6){aspect-ratio:16/10;}
+  .tile img{display:block;width:100%;height:100%;object-fit:cover;}
+  .special-images{width:100%;display:grid;grid-template-columns:1fr;gap:18px;}
+  .special-landscape{height:auto;min-height:0;aspect-ratio:16/10;}
+  .special-landscape img{display:block;width:100%;height:100%;object-fit:contain!important;object-position:center!important;background:#0b0b0c!important;}
+}
+
 </style>
 </head>
 <body>
@@ -83,6 +102,9 @@ function playOne(){one.currentTime=145; one.play().catch(()=>{}); playing=true; 
 function playTwo(){one.pause(); two.currentTime=219; two.play().catch(()=>{}); playing=true; secondStarted=true; status.textContent='I See Fire'; now.textContent='I See Fire'; toggle.textContent='Ⅱ';}
 start.onclick=()=>{enter.classList.add('hide'); playOne();};
 toggle.onclick=()=>{let a=secondStarted?two:one;if(a.paused){a.play();playing=true;toggle.textContent='Ⅱ';status.textContent=secondStarted?'I See Fire':'Castle on the Hill'}else{a.pause();playing=false;toggle.textContent='▶';status.textContent='Soundtrack paused'}};
+// Keep the first soundtrack alive until the user actually scrolls into the special-message chapter.
+one.addEventListener('ended',()=>{ if(!secondStarted){ one.currentTime=145; one.play().catch(()=>{}); } });
+// Let the second soundtrack play naturally to its own ending.
 const specialSection=document.querySelector('.special');
 const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('active'); if(e.target.dataset.theme==='special')playTwo();}}),{threshold:.45});
 document.querySelectorAll('.chapter,.special').forEach(s=>io.observe(s));
