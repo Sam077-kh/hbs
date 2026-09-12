@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Soundtrack of Sahil — Lulu Ram Edition</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#08090a;--fg:#f4eee6;--muted:#a7a29a;--accent:#d99a68;--line:#ffffff1c;--panel:#111315}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--fg);font-family:DM Sans, sans-serif;overflow-x:hidden;transition:background 1s,color 1s}
+body:before{content:"";position:fixed;inset:0;z-index:20;pointer-events:none;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.8' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:inherit;text-decoration:none}.nav{position:fixed;top:0;left:0;right:0;z-index:30;display:flex;justify-content:space-between;align-items:center;padding:20px 4vw;font-size:11px;letter-spacing:2px;text-transform:uppercase;background:linear-gradient(#08090add,transparent)}.brand{font-weight:700}.nav span{color:var(--accent)}.music-pill{border:1px solid #d99a6866;border-radius:100px;padding:9px 14px;letter-spacing:1px;cursor:pointer;background:#1118}
+.hero{min-height:100vh;display:grid;place-items:center;position:relative;overflow:hidden;padding:100px 6vw}.hero-bg{position:absolute;inset:0;background:radial-gradient(circle at 70% 35%,#6f3f2a55,transparent 32%),linear-gradient(115deg,#08090a 30%,#15100e 100%)}.hero-grid{position:relative;z-index:1;width:min(1250px,100%);display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:center}.eyebrow{font-size:11px;letter-spacing:4px;color:var(--accent);text-transform:uppercase}.hero h1{font:600 clamp(65px,10vw,160px)/.82 "Playfair Display";letter-spacing:-6px;margin:20px 0}.hero h1 em{font-style:normal;color:var(--accent)}.hero p{max-width:440px;color:var(--muted);line-height:1.8}.scribble{font:32px Caveat;color:#e5c0a1;margin-top:35px}.hero-image{height:75vh;min-height:500px;overflow:hidden;border-radius:4px;position:relative}.hero-image img{width:100%;height:100%;object-fit:cover;object-position:50% 28%;filter:saturate(.75);transform:scale(1.04)}.hero-image:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 45%,#08090a 100%)}.scroll{position:absolute;bottom:30px;left:6vw;color:#777;font-size:10px;letter-spacing:3px}
+.chapter{min-height:100vh;display:grid;align-items:center;padding:12vh 7vw;position:relative;transition:background 1.2s}.chapter-inner{width:min(1200px,100%);margin:auto}.chapter-grid{display:grid;grid-template-columns:1fr 1fr;gap:7vw;align-items:center}.num{font-size:12px;letter-spacing:3px;color:var(--accent);margin-bottom:20px}.chapter h2{font:600 clamp(42px,6vw,92px)/.95 "Playfair Display";letter-spacing:-3px;margin:0 0 25px}.chapter p{font-size:clamp(17px,1.7vw,23px);line-height:1.65;color:var(--muted);max-width:510px}.quote{font:30px Caveat;color:var(--fg);margin-top:28px}.media{height:68vh;max-height:720px;min-height:420px;overflow:hidden;border-radius:3px;background:#111;box-shadow:0 30px 100px #0008}.media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.5s cubic-bezier(.2,.8,.2,1);filter:saturate(.78)}.chapter.active .media img{transform:scale(1.05)}.reverse .chapter-grid{direction:rtl}.reverse .chapter-grid>*{direction:ltr}
+.theme-cream{background:#e8e0d5;color:#191512}.theme-cream p{color:#665c53}.theme-cream .media{box-shadow:0 30px 100px #0002}.theme-cream .num{color:#9c6545}.theme-cream .quote{color:#4a3428}
+.theme-burgundy{background:linear-gradient(120deg,#160e12,#351d28);}.theme-copper{background:linear-gradient(120deg,#1b120e,#533022)}
+.gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;margin-top:55px}.tile{height:350px;overflow:hidden;border-radius:3px;position:relative;background:#111}.tile:nth-child(1){grid-column:span 5}.tile:nth-child(2){grid-column:span 7}.tile:nth-child(3){grid-column:span 4}.tile:nth-child(4){grid-column:span 4}.tile:nth-child(5){grid-column:span 4}.tile:nth-child(6){grid-column:span 7}.tile:nth-child(7){grid-column:span 5}.tile img{width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(.7);transition:transform 1s}.tile:hover img{transform:scale(1.07)}.tile label{position:absolute;bottom:16px;left:18px;font:24px Caveat;color:white;text-shadow:0 2px 12px #000}
+.special{min-height:100vh;display:grid;place-items:center;padding:15vh 7vw;background:radial-gradient(circle at 25% 30%,#703b2d55,transparent 35%),#100d10}.special-wrap{width:min(1150px,100%);display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:center}.special-photo{height:650px;overflow:hidden}.special-photo img{width:100%;height:100%;object-fit:cover;object-position:center}.special h2{font:600 clamp(48px,6vw,90px)/.95 "Playfair Display";margin:0 0 28px}.special p{font:28px/1.45 Caveat;color:#ead8cb;margin:0 0 18px}.fire{font:52px Caveat;color:#eaa16b;margin-top:30px;text-shadow:0 0 35px #e66f3d55}.signature{font:25px Caveat;color:#a9968d;margin-top:30px}
+.end{min-height:75vh;display:grid;place-items:center;text-align:center;padding:10vh 6vw;background:#050506}.end h2{font:600 clamp(55px,10vw,150px)/.88 "Playfair Display";letter-spacing:-5px;margin:0}.end h2 span{color:var(--accent)}.end p{font:28px Caveat;color:var(--muted)}.footer{padding:25px 5vw;display:flex;justify-content:space-between;color:#666;font-size:10px;letter-spacing:2px;text-transform:uppercase;border-top:1px solid var(--line)}
+.enter{position:fixed;inset:0;z-index:100;background:#08090a;display:grid;place-items:center;transition:opacity 1s,visibility 1s}.enter.hide{opacity:0;visibility:hidden}.enter-inner{text-align:center}.enter h1{font:600 clamp(55px,9vw,130px)/.86 "Playfair Display";margin:20px 0}.enter h1 span{color:var(--accent)}.enter p{font:25px Caveat;color:#aaa}.btn{cursor:pointer;border:1px solid #d99a68aa;background:transparent;color:#f4eee6;border-radius:100px;padding:16px 25px;text-transform:uppercase;letter-spacing:2px;font-size:11px}.btn:hover{background:var(--accent);color:#08090a}
+.player{position:fixed;z-index:40;bottom:22px;right:22px;background:#151719ee;border:1px solid #ffffff1c;border-radius:100px;padding:10px 15px;display:flex;gap:12px;align-items:center;font-size:11px;backdrop-filter:blur(20px)}.player button{background:none;border:0;color:white;cursor:pointer;font-size:16px}.dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent)}
+.reveal{opacity:0;transform:translateY(35px);transition:1s ease}.reveal.show{opacity:1;transform:none}
+
+/* precision image framing + cinematic special-message layout */
+.media-landscape{height:clamp(360px,52vh,560px)}
+.media-landscape img{object-position:center 58%}
+.chapter:nth-of-type(2) .media img{object-position:center 52%;transform:scale(.94)}
+.chapter:nth-of-type(3) .media img{object-fit:cover;object-position:center 50%}
+.tile-iconic img{object-fit:contain!important;background:#0d0d0f;padding:14px}
+.special-wrap{display:block!important;max-width:1200px!important}
+.special-copy{text-align:center;max-width:900px;margin:0 auto 55px}
+.special-copy p{max-width:850px;margin-left:auto;margin-right:auto}
+.special-images{display:grid;grid-template-columns:1fr 1fr;gap:24px;width:100%}
+.special-landscape{height:clamp(260px,35vw,460px);position:relative;overflow:hidden;border:1px solid #ffffff1c;background:#0b0b0c}
+.special-landscape img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform 1.4s cubic-bezier(.2,.8,.2,1)}
+.special-landscape:hover img{transform:scale(1.035)}
+.special-landscape span{position:absolute;bottom:16px;left:20px;font:24px Caveat;color:#fff;text-shadow:0 2px 14px #000}
+@media(max-width:800px){.special-images{grid-template-columns:1fr}.special-copy{margin-bottom:35px}.special-landscape{height:300px}}
+
+@media(max-width:800px){.nav{padding:17px 5vw}.nav .links{display:none}.hero-grid,.chapter-grid,.special-wrap{grid-template-columns:1fr}.hero{padding-top:100px}.hero-image{height:58vh;min-height:400px}.chapter{padding:90px 6vw;min-height:auto}.chapter-grid{gap:35px}.media{height:55vh;min-height:350px}.reverse .chapter-grid{direction:ltr}.gallery{grid-template-columns:1fr 1fr}.tile,.tile:nth-child(n){grid-column:span 1;height:260px}.tile:nth-child(1),.tile:nth-child(6){grid-column:span 2}.special-photo{height:55vh}.special p{font-size:25px}.footer{display:block;line-height:2}}
+
+/* STRICT FINAL EDIT: only the requested image framing changes */
+.chapter:nth-of-type(2) .media-landscape img{object-fit:contain!important;object-position:50% 62%!important;transform:scale(.86)!important;background:#111!important}
+.special-images .special-landscape:first-child img{object-fit:contain!important;object-position:center!important;background:#0b0b0c!important}
+
+/* ADDITIVE KEYFRAME ANIMATIONS — existing design/layout untouched */
+@keyframes cinematicBreath{0%,100%{transform:scale(1.04)}50%{transform:scale(1.075)}}
+@keyframes softFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes glowPulse{0%,100%{box-shadow:0 0 0 rgba(217,154,104,0)}50%{box-shadow:0 0 28px rgba(217,154,104,.18)}}
+@keyframes lineReveal{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.hero-image img{animation:cinematicBreath 12s ease-in-out infinite}
+.music-pill{animation:glowPulse 4s ease-in-out infinite}
+.scribble,.quote{animation:softFloat 6s ease-in-out infinite}
+.enter-inner{animation:lineReveal 1.2s cubic-bezier(.2,.8,.2,1) both}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="enter" id="enter"><div class="enter-inner"><div class="eyebrow">An unofficial birthday production</div><h1>The Soundtrack<br>of <span>Sahil</span></h1><p>The Lulu Ram Edition 👽</p><button class="btn" id="start">Start the soundtrack →</button></div></div>
+<nav class="nav"><div class="brand">THE SOUNDTRACK OF <span>SAHIL</span></div><div class="links">MUSIC &nbsp; · &nbsp; FRIENDSHIP &nbsp; · &nbsp; CHAOS</div><div class="music-pill" id="pill">♫ <span id="now">Ready</span></div></nav>
+<main>
+<section class="hero" data-theme="dark"><div class="hero-bg"></div><div class="hero-grid"><div class="reveal"><div class="eyebrow">A birthday note from Bakugo</div><h1>Happy<br><em>Sahil.</em></h1><p>For the guitarist, singer, certified alien, emotional-support human, and the only guy capable of watching MHA Season 1 and then jumping straight to Season 4.</p><div class="scribble">Good friends. Great music. Brighter days.</div></div><div class="hero-image reveal"><img src="photo1.jpeg" alt="Sahil"></div></div><div class="scroll">SCROLL TO BEGIN ↓</div></section>
+
+<section class="chapter theme-cream" data-theme="cream"><div class="chapter-inner"><div class="chapter-grid"><div class="reveal"><div class="num">01 / THE ARTIST</div><h2>More than<br>just talent.</h2><p>You don't just play music. You make people feel something. A guitarist, a singer, a vibe — but somehow an even better human.</p><div class="quote">“Good music, better human.”</div></div><div class="media media-landscape reveal"><img src="photo2.jpeg" alt="Sahil portrait"></div></div></div></section>
+
+<section class="chapter" data-theme="dark"><div class="chapter-inner"><div class="chapter-grid reverse"><div class="reveal"><div class="num">02 / THE HUMAN</div><h2>Always<br>there.</h2><p>Whenever I need someone to talk to, this guy is always there. No judgement, just vibes, real talks and endless support.</p><div class="quote">Some people don't just listen. They make you feel heard.</div></div><div class="media reveal"><img src="photo3.jpg" alt="Sahil laughing"></div></div></div></section>
+
+<section class="chapter theme-burgundy" data-theme="burgundy"><div class="chapter-inner"><div class="chapter-grid"><div class="reveal"><div class="num">03 / THE CHAOS</div><h2>A different<br>kind of genius.</h2><p>Bro really watched MHA Season 1... then Season 4. A crime against storytelling. And somehow still has alien strength. Scientists remain confused. 👽</p><div class="quote">The Lulu Ram cinematic universe.</div></div><div class="media reveal"><img src="photo9.jpg" alt="Sahil chaos"></div></div></div></section>
+
+<section class="chapter" data-theme="dark"><div class="chapter-inner"><div class="num reveal">04 / THE ARCHIVE</div><h2 class="reveal">A few frames<br>from the legend.</h2><div class="gallery"><div class="tile reveal"><img src="photo5.jpg"><label>The guitarist</label></div><div class="tile reveal"><img src="photo6.jpg"><label>Certified nonsense</label></div><div class="tile reveal"><img src="photo7.jpg"><label>Peak Lulu Ram</label></div><div class="tile reveal"><img src="photo8.jpg"><label>Alien energy</label></div><div class="tile tile-iconic reveal"><img src="photo9.jpg"><label>Still iconic</label></div></div></div></section>
+
+<section class="chapter theme-copper" data-theme="copper"><div class="chapter-inner"><div class="chapter-grid reverse"><div class="reveal"><div class="num">05 / THE SOUNDTRACK</div><h2>Every memory<br>needs a song.</h2><p>For the nights, the jokes, the music, the chaos and the friendship — here's the soundtrack of this chapter.</p><div class="quote">Castle on the Hill → the journey continues.</div></div><div class="media reveal"><img src="photo1.jpeg" alt="Sahil"></div></div></div></section>
+
+<section class="special" data-theme="special"><div class="special-wrap"><div class="reveal special-copy"><div class="num">06 / A SPECIAL MESSAGE</div><h2>Sahil baby,<br>this one's for you.</h2><p>Sahil baby, you don't have to be scared. You will do great in your life, achieve great heights of success.</p><p>Bhai, your heart knows what you need to do — just follow your godddam heart, bhai.</p><p>I always love you and support you, mere bhai. ❤️ You're my star ⭐, my superhero. You inspire me to be happy and live life my way, on my own terms.</p><p>Love you and happy birthday! Wished you at the right time, didn't I? 😜😘</p><div class="fire">I SEE FIRE IN YOU. 🔥</div><div class="signature">— Your Bakugo, always in your corner</div></div><div class="special-images"><div class="special-landscape reveal"><img src="photo4.jpg" alt="Sahil with his guitar"><span>the guitarist, always.</span></div><div class="special-landscape reveal"><img src="us-night.png" alt="Two friends at night"><span>brothers for life.</span></div></div></div></section>
+<section class="end"><div class="reveal"><div class="eyebrow">07 / ALWAYS</div><h2>The best songs<br>are still <span>unwritten.</span></h2><p>Happy birthday, Sahil. More chapters. More music. More life.</p></div></section>
+</main>
+<footer class="footer"><span>Made with love, for Sahil</span><span>The Lulu Ram Edition · Bakugo ❤️</span></footer>
+<div class="player"><div class="dot"></div><span id="status">Soundtrack paused</span><button id="toggle">▶</button></div>
+<audio id="one" preload="auto" src="track-one.mp3"></audio><audio id="two" preload="auto" src="track-two.mp3"></audio>
+<script>
+const enter=document.getElementById('enter'), one=document.getElementById('one'), two=document.getElementById('two'), start=document.getElementById('start'), toggle=document.getElementById('toggle'), status=document.getElementById('status'), now=document.getElementById('now');
+let playing=false, secondStarted=false, lastY=window.scrollY;
+function playOne(){one.currentTime=145; one.play().catch(()=>{}); playing=true; status.textContent='Castle on the Hill'; now.textContent='Castle on the Hill'; toggle.textContent='Ⅱ';}
+function playTwo(){one.pause(); two.currentTime=219; two.play().catch(()=>{}); playing=true; secondStarted=true; status.textContent='I See Fire'; now.textContent='I See Fire'; toggle.textContent='Ⅱ';}
+start.onclick=()=>{enter.classList.add('hide'); playOne();};
+toggle.onclick=()=>{let a=secondStarted?two:one;if(a.paused){a.play();playing=true;toggle.textContent='Ⅱ';status.textContent=secondStarted?'I See Fire':'Castle on the Hill'}else{a.pause();playing=false;toggle.textContent='▶';status.textContent='Soundtrack paused'}};
+const specialSection=document.querySelector('.special');
+const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('active'); if(e.target.dataset.theme==='special')playTwo();}}),{threshold:.45});
+document.querySelectorAll('.chapter,.special').forEach(s=>io.observe(s));
+window.addEventListener('scroll',()=>{const y=window.scrollY, down=y>lastY; if(specialSection && !down && y < specialSection.offsetTop-180 && secondStarted) playOne(); lastY=y;},{passive:true});
+const rev=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(x=>rev.observe(x));
+</script>
+</body></html>
